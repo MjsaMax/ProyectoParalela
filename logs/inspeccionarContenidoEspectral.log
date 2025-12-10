@@ -1,0 +1,1520 @@
+
+Encontrados 5 archivos FITS para inspeccionar
+================================================================================
+
+
+================================================================================
+INSPECCIONANDO: ./data/BINTABLE/100006.fits
+================================================================================
+
+Total de HDUs (extensiones): 12
+
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 0: PRIMARY
+────────────────────────────────────────────────────────────────────────────────
+Tipo: PrimaryHDU
+
+HEADERS (11 campos):
+────────────────────────────────────────────────────────────────────────────────
+COMMENT              =   FITS (Flexible Image Transport System) format defined in Astronomy and / 
+COMMENT              =   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365. / 
+COMMENT              =   Contact the NASA Science Office of Standards and Technology for the / 
+COMMENT              =   FITS Definition document #100 and other FITS information. / 
+
+TODOS LOS HEADERS:
+SIMPLE               = True                                               / file does conform to FITS standard
+BITPIX               = 16                                                 / number of bits per data pixel
+NAXIS                = 0                                                  / number of data axes
+EXTEND               = True                                               / There may be standard extensions
+COMMENT              =   FITS (Flexible Image Transport System) format defined in Astronomy and / 
+COMMENT              =   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365. / 
+COMMENT              =   Contact the NASA Science Office of Standards and Technology for the / 
+COMMENT              =   FITS Definition document #100 and other FITS information. / 
+ORIGIN               = STScI-STSDAS/TABLES                                / Tables version 2002-02-22
+FILENAME             = 100006.fits                                        / name of file
+NEXTEND              = 11                                                 / number of extensions in file
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 1: merged
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (44 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (15011,)), ('spectrum', '>f4', (15011,))])
+
+  Columnas:
+    - wavelength: 15011E
+    - spectrum: 15011E
+
+  Primeras filas:
+    Row 0: (array([3465.    , 3465.4001, 3465.8   , ..., 9468.2   , 9468.601 ,
+       9469.    ], shape=(15011,), dtype='>f4'), array([0.20128594, 0.16638769, 0.13899961, ..., 0.59781134, 0.5911584 ,
+       0.5720341 ], shape=(15011,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 2: c0002160040
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3066,)), ('spectrum', '>f4', (3066,)), ('raw', '>f4', (3066,)), ('background', '>f4', (3066,)), ('sigma', '>f4', (3066,))])
+
+  Columnas:
+    - wavelength: 3066E
+    - spectrum: 3066E
+    - raw: 3066E
+    - background: 3066E
+    - sigma: 3066E
+
+  Primeras filas:
+    Row 0: (array([6009.7744, 6009.3403, 6008.9062, ..., 4680.5083, 4680.0747,
+       4679.6416], shape=(3066,), dtype='>f4'), array([0.92914355, 0.9817963 , 0.97269046, ..., 0.8295896 , 0.8270918 ,
+       0.87125766], shape=(3066,), dtype='>f4'), array([0.9672204 , 0.9928329 , 0.97499496, ..., 0.8295854 , 0.83074975,
+       0.87131274], shape=(3066,), dtype='>f4'), array([0.00176952, 0.00153571, 0.00219877, ..., 0.00130081, 0.00177539,
+       0.0014907 ], shape=(3066,), dtype='>f4'), array([0.00435593, 0.0041148 , 0.00389687, ..., 0.0037274 , 0.00384533,
+       0.00381972], shape=(3066,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 3: c0006060020
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3063,)), ('spectrum', '>f4', (3063,)), ('raw', '>f4', (3063,)), ('background', '>f4', (3063,)), ('sigma', '>f4', (3063,))])
+
+  Columnas:
+    - wavelength: 3063E
+    - spectrum: 3063E
+    - raw: 3063E
+    - background: 3063E
+    - sigma: 3063E
+
+  Primeras filas:
+    Row 0: (array([4765.2363, 4764.8027, 4764.3696, ..., 3440.416 , 3439.9836,
+       3439.5513], shape=(3063,), dtype='>f4'), array([0.8496552 , 0.88620645, 0.8856023 , ..., 0.07714633, 0.10704952,
+       0.14087236], shape=(3063,), dtype='>f4'), array([0.84982884, 0.88624793, 0.8857252 , ..., 0.07903454, 0.10852741,
+       0.14043368], shape=(3063,), dtype='>f4'), array([0.00339803, 0.00312362, 0.00253866, ..., 0.00298016, 0.00041211,
+       0.00219601], shape=(3063,), dtype='>f4'), array([0.00362695, 0.00370289, 0.0037012 , ..., 0.00359312, 0.0039229 ,
+       0.00431013], shape=(3063,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 4: c9506190005
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3070,)), ('spectrum', '>f4', (3070,)), ('raw', '>f4', (3070,)), ('background', '>f4', (3070,)), ('sigma', '>f4', (3070,))])
+
+  Columnas:
+    - wavelength: 3070E
+    - spectrum: 3070E
+    - raw: 3070E
+    - background: 3070E
+    - sigma: 3070E
+
+  Primeras filas:
+    Row 0: (array([6797.8696, 6797.434 , 6796.998 , ..., 5462.4243, 5461.9893,
+       5461.5547], shape=(3070,), dtype='>f4'), array([0.75402725, 0.83932734, 0.91577864, ..., 0.92550045, 0.9183216 ,
+       0.8621646 ], shape=(3070,), dtype='>f4'), array([0.82202107, 0.87454635, 0.9149564 , ..., 0.92584735, 0.9507882 ,
+       0.91887194], shape=(3070,), dtype='>f4'), array([0.00763866, 0.00761805, 0.00787526, ..., 0.01268219, 0.01183394,
+       0.01245592], shape=(3070,), dtype='>f4'), array([0.00290327, 0.00312311, 0.00312158, ..., 0.00414219, 0.00416327,
+       0.00382327], shape=(3070,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 5: c9605060020
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3060,)), ('spectrum', '>f4', (3060,)), ('raw', '>f4', (3060,)), ('background', '>f4', (3060,)), ('sigma', '>f4', (3060,))])
+
+  Columnas:
+    - wavelength: 3060E
+    - spectrum: 3060E
+    - raw: 3060E
+    - background: 3060E
+    - sigma: 3060E
+
+  Primeras filas:
+    Row 0: (array([9469.05 , 9468.614, 9468.179, ..., 8137.452, 8137.017, 8136.582],
+      shape=(3060,), dtype='>f4'), array([0.5688515 , 0.5917071 , 0.5982055 , ..., 0.7538721 , 0.75107455,
+       0.7502939 ], shape=(3060,), dtype='>f4'), array([0.554392  , 0.54693425, 0.48909894, ..., 0.81823653, 0.82182294,
+       0.8241309 ], shape=(3060,), dtype='>f4'), array([0.00199251, 0.00116506, 0.00137219, ..., 0.00167975, 0.00171865,
+       0.00183976], shape=(3060,), dtype='>f4'), array([0.00315944, 0.00313733, 0.00297212, ..., 0.00264987, 0.00265586,
+       0.00279736], shape=(3060,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 6: c9905300006
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3063,)), ('spectrum', '>f4', (3063,)), ('raw', '>f4', (3063,)), ('background', '>f4', (3063,)), ('sigma', '>f4', (3063,))])
+
+  Columnas:
+    - wavelength: 3063E
+    - spectrum: 3063E
+    - raw: 3063E
+    - background: 3063E
+    - sigma: 3063E
+
+  Primeras filas:
+    Row 0: (array([8160.5386, 8160.103 , 8159.667 , ..., 6828.5737, 6828.1387,
+       6827.704 ], shape=(3063,), dtype='>f4'), array([0.76399857, 0.7836195 , 0.7979353 , ..., 0.96069616, 0.953041  ,
+       0.97587776], shape=(3063,), dtype='>f4'), array([0.5250099 , 0.49423817, 0.61841154, ..., 1.0063187 , 0.9983469 ,
+       1.0222929 ], shape=(3063,), dtype='>f4'), array([0.00274057, 0.00257714, 0.00283937, ..., 0.00346588, 0.00347274,
+       0.00413801], shape=(3063,), dtype='>f4'), array([0.00406253, 0.00371654, 0.00414063, ..., 0.00433495, 0.00431959,
+       0.00437352], shape=(3063,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 7: a0002160040
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3066,)), ('spectrum', '>f4', (3066,)), ('raw', '>f4', (3066,)), ('background', '>f4', (3066,)), ('sigma', '>f4', (3066,))])
+
+  Columnas:
+    - wavelength: 3066E
+    - spectrum: 3066E
+    - raw: 3066E
+    - background: 3066E
+    - sigma: 3066E
+
+  Primeras filas:
+    Row 0: (array([6009.7744, 6009.3403, 6008.9062, ..., 4680.5083, 4680.0747,
+       4679.6416], shape=(3066,), dtype='>f4'), array([26589.021, 28098.023, 27839.582, ..., 21680.682, 21609.783,
+       22757.686], shape=(3066,), dtype='>f4'), array([27678.656, 28413.879, 27905.54 , ..., 21680.572, 21705.355,
+       22759.125], shape=(3066,), dtype='>f4'), array([50.63787 , 43.95048 , 62.931347, ..., 33.99556 , 46.386303,
+       38.937702], shape=(3066,), dtype='>f4'), array([124.65246, 117.76135, 111.53309, ...,  97.4128 , 100.46854,
+        99.77297], shape=(3066,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 8: a0006060020
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3063,)), ('spectrum', '>f4', (3063,)), ('raw', '>f4', (3063,)), ('background', '>f4', (3063,)), ('sigma', '>f4', (3063,))])
+
+  Columnas:
+    - wavelength: 3063E
+    - spectrum: 3063E
+    - raw: 3063E
+    - background: 3063E
+    - sigma: 3063E
+
+  Primeras filas:
+    Row 0: (array([4765.2363, 4764.8027, 4764.3696, ..., 3440.416 , 3439.9836,
+       3439.5513], shape=(3063,), dtype='>f4'), array([24297.799  , 25332.428  , 25304.623  , ...,   391.61713,
+         541.3406 ,   709.6343 ], shape=(3063,), dtype='>f4'), array([24302.766  , 25333.613  , 25308.135  , ...,   401.20224,
+         548.81415,   707.4245 ], shape=(3063,), dtype='>f4'), array([97.17428  , 89.28936  , 72.53815  , ..., 15.128156 ,  2.0840213,
+       11.062221 ], shape=(3063,), dtype='>f4'), array([103.72086 , 105.847946, 105.755585, ...,  18.239706,  19.837795,
+        21.711956], shape=(3063,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 9: a9506190005
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3070,)), ('spectrum', '>f4', (3070,)), ('raw', '>f4', (3070,)), ('background', '>f4', (3070,)), ('sigma', '>f4', (3070,))])
+
+  Columnas:
+    - wavelength: 3070E
+    - spectrum: 3070E
+    - raw: 3070E
+    - background: 3070E
+    - sigma: 3070E
+
+  Primeras filas:
+    Row 0: (array([6797.8696, 6797.434 , 6796.998 , ..., 5462.4243, 5461.9893,
+       5461.5547], shape=(3070,), dtype='>f4'), array([28784.195, 32032.158, 34940.844, ..., 22134.525, 21947.734,
+       20591.361], shape=(3070,), dtype='>f4'), array([31379.787, 33376.258, 34909.473, ..., 22142.822, 22723.682,
+       21945.72 ], shape=(3070,), dtype='>f4'), array([291.59796, 290.73593, 300.47464, ..., 303.31082, 282.8292 ,
+       297.48877], shape=(3070,), dtype='>f4'), array([110.82934 , 119.19065 , 119.10142 , ...,  99.065704,  99.50156 ,
+        91.31244 ], shape=(3070,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 10: a9605060020
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3060,)), ('spectrum', '>f4', (3060,)), ('raw', '>f4', (3060,)), ('background', '>f4', (3060,)), ('sigma', '>f4', (3060,))])
+
+  Columnas:
+    - wavelength: 3060E
+    - spectrum: 3060E
+    - raw: 3060E
+    - background: 3060E
+    - sigma: 3060E
+
+  Primeras filas:
+    Row 0: (array([9469.05 , 9468.614, 9468.179, ..., 8137.452, 8137.017, 8136.582],
+      shape=(3060,), dtype='>f4'), array([10705.195, 11125.334, 11237.582, ..., 29344.422, 29233.629,
+       29201.281], shape=(3060,), dtype='>f4'), array([10433.083, 10283.511,  9187.962, ..., 31849.805, 31987.326,
+       32075.002], shape=(3060,), dtype='>f4'), array([37.49694 , 21.90566 , 25.777346, ..., 65.383965, 66.89393 ,
+       71.60323 ], shape=(3060,), dtype='>f4'), array([ 59.45747 ,  58.988445,  55.83281 , ..., 103.145836, 103.37263 ,
+       108.8725  ], shape=(3060,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 11: a9905300006
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4755                                               / 1978A&A....67..311F (Foy)
+LOGG                 = 3.0                                                / 1978A&A....67..311F (Foy)
+FEH                  = 0.02                                               / 1978A&A....67..311F (Foy)
+OBJECT               = 100006                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3063,)), ('spectrum', '>f4', (3063,)), ('raw', '>f4', (3063,)), ('background', '>f4', (3063,)), ('sigma', '>f4', (3063,))])
+
+  Columnas:
+    - wavelength: 3063E
+    - spectrum: 3063E
+    - raw: 3063E
+    - background: 3063E
+    - sigma: 3063E
+
+  Primeras filas:
+    Row 0: (array([8160.5386, 8160.103 , 8159.667 , ..., 6828.5737, 6828.1387,
+       6827.704 ], shape=(3063,), dtype='>f4'), array([12486.292, 12800.356, 13027.521, ..., 22765.697, 22567.26 ,
+       23090.408], shape=(3063,), dtype='>f4'), array([ 8580.418 ,  8073.3374, 10096.52  , ..., 23846.818 , 23640.068 ,
+       24188.645 ], shape=(3063,), dtype='>f4'), array([44.790043, 42.09736 , 46.357094, ..., 82.13127 , 82.23183 ,
+       97.910225], shape=(3063,), dtype='>f4'), array([ 66.39536 ,  60.709377,  67.60219 , ..., 102.72567 , 102.284546,
+       103.48256 ], shape=(3063,), dtype='>f4'))
+
+
+
+================================================================================
+INSPECCIONANDO: ./data/BINTABLE/100030.fits
+================================================================================
+
+Total de HDUs (extensiones): 12
+
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 0: PRIMARY
+────────────────────────────────────────────────────────────────────────────────
+Tipo: PrimaryHDU
+
+HEADERS (11 campos):
+────────────────────────────────────────────────────────────────────────────────
+COMMENT              =   FITS (Flexible Image Transport System) format defined in Astronomy and / 
+COMMENT              =   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365. / 
+COMMENT              =   Contact the NASA Science Office of Standards and Technology for the / 
+COMMENT              =   FITS Definition document #100 and other FITS information. / 
+
+TODOS LOS HEADERS:
+SIMPLE               = True                                               / file does conform to FITS standard
+BITPIX               = 16                                                 / number of bits per data pixel
+NAXIS                = 0                                                  / number of data axes
+EXTEND               = True                                               / There may be standard extensions
+COMMENT              =   FITS (Flexible Image Transport System) format defined in Astronomy and / 
+COMMENT              =   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365. / 
+COMMENT              =   Contact the NASA Science Office of Standards and Technology for the / 
+COMMENT              =   FITS Definition document #100 and other FITS information. / 
+ORIGIN               = STScI-STSDAS/TABLES                                / Tables version 2002-02-22
+FILENAME             = 100030.fits                                        / name of file
+NEXTEND              = 11                                                 / number of extensions in file
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 1: merged
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (44 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (15011,)), ('spectrum', '>f4', (15011,))])
+
+  Columnas:
+    - wavelength: 15011E
+    - spectrum: 15011E
+
+  Primeras filas:
+    Row 0: (array([3465.    , 3465.4001, 3465.8   , ..., 9468.2   , 9468.601 ,
+       9469.    ], shape=(15011,), dtype='>f4'), array([0.31626794, 0.28763998, 0.24185497, ..., 0.5368954 , 0.5337011 ,
+       0.52222383], shape=(15011,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 2: c0002160041
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3066,)), ('spectrum', '>f4', (3066,)), ('raw', '>f4', (3066,)), ('background', '>f4', (3066,)), ('sigma', '>f4', (3066,))])
+
+  Columnas:
+    - wavelength: 3066E
+    - spectrum: 3066E
+    - raw: 3066E
+    - background: 3066E
+    - sigma: 3066E
+
+  Primeras filas:
+    Row 0: (array([6009.3745, 6008.9404, 6008.5063, ..., 4680.196 , 4679.7627,
+       4679.3296], shape=(3066,), dtype='>f4'), array([0.8722655 , 0.90405136, 0.8878895 , ..., 0.9548119 , 0.97401685,
+       0.9884214 ], shape=(3066,), dtype='>f4'), array([0.9032974 , 0.91359633, 0.88821155, ..., 0.9550216 , 0.9741228 ,
+       0.9886412 ], shape=(3066,), dtype='>f4'), array([0.00180894, 0.00216097, 0.0030633 , ..., 0.0008149 , 0.00275005,
+       0.00204548], shape=(3066,), dtype='>f4'), array([0.00587501, 0.00565468, 0.00542565, ..., 0.00588654, 0.00595243,
+       0.00599455], shape=(3066,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 3: c0203210025
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3062,)), ('spectrum', '>f4', (3062,)), ('raw', '>f4', (3062,)), ('background', '>f4', (3062,)), ('sigma', '>f4', (3062,))])
+
+  Columnas:
+    - wavelength: 3062E
+    - spectrum: 3062E
+    - raw: 3062E
+    - background: 3062E
+    - sigma: 3062E
+
+  Primeras filas:
+    Row 0: (array([4766.428 , 4765.9946, 4765.561 , ..., 3441.6694, 3441.237 ,
+       3440.805 ], shape=(3062,), dtype='>f4'), array([0.96031183, 0.9468116 , 0.9648795 , ..., 0.12671912, 0.10764841,
+       0.10597938], shape=(3062,), dtype='>f4'), array([0.9667381 , 0.96208864, 0.964687  , ..., 0.12697984, 0.10798624,
+       0.10735903], shape=(3062,), dtype='>f4'), array([ 0.00177737,  0.00128829,  0.00129005, ...,  0.00133864,
+        0.00218514, -0.00063832], shape=(3062,), dtype='>f4'), array([0.00422574, 0.00428926, 0.00398735, ..., 0.002684  , 0.00251705,
+       0.00248625], shape=(3062,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 4: c9512180056
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3060,)), ('spectrum', '>f4', (3060,)), ('raw', '>f4', (3060,)), ('background', '>f4', (3060,)), ('sigma', '>f4', (3060,))])
+
+  Columnas:
+    - wavelength: 3060E
+    - spectrum: 3060E
+    - raw: 3060E
+    - background: 3060E
+    - sigma: 3060E
+
+  Primeras filas:
+    Row 0: (array([6791.3237, 6790.889 , 6790.454 , ..., 5461.8745, 5461.4404,
+       5461.0063], shape=(3060,), dtype='>f4'), array([0.9078006 , 0.9091477 , 0.90698016, ..., 1.0338423 , 1.0281408 ,
+       1.0245274 ], shape=(3060,), dtype='>f4'), array([0.9077957, 0.9091366, 0.9069311, ..., 1.0337445, 1.0281012,
+       1.028805 ], shape=(3060,), dtype='>f4'), array([0.00174688, 0.00141898, 0.00126745, ..., 0.00115981, 0.00160809,
+       0.00195429], shape=(3060,), dtype='>f4'), array([0.00387185, 0.00387488, 0.00387066, ..., 0.00569645, 0.0056848 ,
+       0.00583342], shape=(3060,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 5: c9605070029
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3060,)), ('spectrum', '>f4', (3060,)), ('raw', '>f4', (3060,)), ('background', '>f4', (3060,)), ('sigma', '>f4', (3060,))])
+
+  Columnas:
+    - wavelength: 3060E
+    - spectrum: 3060E
+    - raw: 3060E
+    - background: 3060E
+    - sigma: 3060E
+
+  Primeras filas:
+    Row 0: (array([9468.974, 9468.538, 9468.103, ..., 8137.415, 8136.98 , 8136.545],
+      shape=(3060,), dtype='>f4'), array([0.52165   , 0.53611064, 0.5359198 , ..., 0.68718225, 0.6920477 ,
+       0.6880885 ], shape=(3060,), dtype='>f4'), array([0.5137509 , 0.4985678 , 0.45936424, ..., 0.73749614, 0.74461675,
+       0.74677217], shape=(3060,), dtype='>f4'), array([ 0.00195999, -0.00044939,  0.00183665, ...,  0.00190656,
+        0.00225113,  0.0029806 ], shape=(3060,), dtype='>f4'), array([0.00424975, 0.00422003, 0.00425095, ..., 0.00348254, 0.00349901,
+       0.00350495], shape=(3060,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 6: c9906010016
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3063,)), ('spectrum', '>f4', (3063,)), ('raw', '>f4', (3063,)), ('background', '>f4', (3063,)), ('sigma', '>f4', (3063,))])
+
+  Columnas:
+    - wavelength: 3063E
+    - spectrum: 3063E
+    - raw: 3063E
+    - background: 3063E
+    - sigma: 3063E
+
+  Primeras filas:
+    Row 0: (array([8160.2686, 8159.8335, 8159.3984, ..., 6828.56  , 6828.126 ,
+       6827.6914], shape=(3063,), dtype='>f4'), array([0.69927084, 0.7120376 , 0.70926416, ..., 0.8807712 , 0.8784998 ,
+       0.8894743 ], shape=(3063,), dtype='>f4'), array([0.43507314, 0.4659386 , 0.55458564, ..., 0.9235859 , 0.9211931 ,
+       0.93267405], shape=(3063,), dtype='>f4'), array([0.0008587 , 0.00107464, 0.00085007, ..., 0.00120112, 0.00094003,
+       0.00142208], shape=(3063,), dtype='>f4'), array([0.00326434, 0.00329148, 0.00345368, ..., 0.00342895, 0.00342492,
+       0.00344795], shape=(3063,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 7: a0002160041
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3066,)), ('spectrum', '>f4', (3066,)), ('raw', '>f4', (3066,)), ('background', '>f4', (3066,)), ('sigma', '>f4', (3066,))])
+
+  Columnas:
+    - wavelength: 3066E
+    - spectrum: 3066E
+    - raw: 3066E
+    - background: 3066E
+    - sigma: 3066E
+
+  Primeras filas:
+    Row 0: (array([6009.3745, 6008.9404, 6008.5063, ..., 4680.196 , 4679.7627,
+       4679.3296], shape=(3066,), dtype='>f4'), array([11648.362 , 12073.9375, 11859.12  , ..., 11603.155 , 11830.457 ,
+       11999.185 ], shape=(3066,), dtype='>f4'), array([12062.768, 12201.414, 11863.421, ..., 11605.704, 11831.744,
+       12001.853], shape=(3066,), dtype='>f4'), array([24.156897 , 28.860554 , 40.915062 , ...,  9.9029045, 33.402287 ,
+       24.83161  ], shape=(3066,), dtype='>f4'), array([78.4558  , 75.52038 , 72.46784 , ..., 71.53495 , 72.29857 ,
+       72.772316], shape=(3066,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 8: a0203210025
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3062,)), ('spectrum', '>f4', (3062,)), ('raw', '>f4', (3062,)), ('background', '>f4', (3062,)), ('sigma', '>f4', (3062,))])
+
+  Columnas:
+    - wavelength: 3062E
+    - spectrum: 3062E
+    - raw: 3062E
+    - background: 3062E
+    - sigma: 3062E
+
+  Primeras filas:
+    Row 0: (array([4766.428 , 4765.9946, 4765.561 , ..., 3441.6694, 3441.237 ,
+       3440.805 ], shape=(3062,), dtype='>f4'), array([25418.633  , 25077.201  , 25571.654  , ...,  1176.8737 ,
+        1000.16125,   985.0528 ], shape=(3062,), dtype='>f4'), array([25588.73   , 25481.828  , 25566.553  , ...,  1179.295  ,
+        1003.30005,   997.8762 ], shape=(3062,), dtype='>f4'), array([47.045586, 34.12167 , 34.189434, ..., 12.432307, 20.302166,
+       -5.93307 ], shape=(3062,), dtype='>f4'), array([111.85162 , 113.60518 , 105.67438 , ...,  24.927034,  23.385872,
+        23.109137], shape=(3062,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 9: a9512180056
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3060,)), ('spectrum', '>f4', (3060,)), ('raw', '>f4', (3060,)), ('background', '>f4', (3060,)), ('sigma', '>f4', (3060,))])
+
+  Columnas:
+    - wavelength: 3060E
+    - spectrum: 3060E
+    - raw: 3060E
+    - background: 3060E
+    - sigma: 3060E
+
+  Primeras filas:
+    Row 0: (array([6791.3237, 6790.889 , 6790.454 , ..., 5461.8745, 5461.4404,
+       5461.0063], shape=(3060,), dtype='>f4'), array([18418.83 , 18438.713, 18387.375, ..., 11106.96 , 11037.726,
+       10990.937], shape=(3060,), dtype='>f4'), array([18418.73 , 18438.488, 18386.38 , ..., 11105.909, 11037.301,
+       11036.825], shape=(3060,), dtype='>f4'), array([35.443306, 28.778875, 25.69516 , ..., 12.460288, 17.26383 ,
+       20.965284], shape=(3060,), dtype='>f4'), array([78.55801 , 78.587654, 78.47068 , ..., 61.199093, 61.029873,
+       62.579876], shape=(3060,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 10: a9605070029
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3060,)), ('spectrum', '>f4', (3060,)), ('raw', '>f4', (3060,)), ('background', '>f4', (3060,)), ('sigma', '>f4', (3060,))])
+
+  Columnas:
+    - wavelength: 3060E
+    - spectrum: 3060E
+    - raw: 3060E
+    - background: 3060E
+    - sigma: 3060E
+
+  Primeras filas:
+    Row 0: (array([9468.974, 9468.538, 9468.103, ..., 8137.415, 8136.98 , 8136.545],
+      shape=(3060,), dtype='>f4'), array([ 5207.9043,  5342.2524,  5330.474 , ..., 14186.128 , 14290.455 ,
+       14212.588 ], shape=(3060,), dtype='>f4'), array([ 5129.0435,  4968.144 ,  4569.0215, ..., 15224.804 , 15375.98  ,
+       15424.71  ], shape=(3060,), dtype='>f4'), array([19.567627 , -4.4781413, 18.26806  , ..., 39.3589   , 46.48467  ,
+       61.564724 ], shape=(3060,), dtype='>f4'), array([42.427464, 42.051876, 42.28162 , ..., 71.89328 , 72.25291 ,
+       72.3953  ], shape=(3060,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 11: a9906010016
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = G9IV                                               / 
+TEFF                 = 5027                                               / Jones..Coude.Feed.Library
+LOGG                 = 2.6                                                / Jones..Coude.Feed.Library
+FEH                  = -0.29                                              / Jones..Coude.Feed.Library
+OBJECT               = 100030                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3063,)), ('spectrum', '>f4', (3063,)), ('raw', '>f4', (3063,)), ('background', '>f4', (3063,)), ('sigma', '>f4', (3063,))])
+
+  Columnas:
+    - wavelength: 3063E
+    - spectrum: 3063E
+    - raw: 3063E
+    - background: 3063E
+    - sigma: 3063E
+
+  Primeras filas:
+    Row 0: (array([8160.2686, 8159.8335, 8159.3984, ..., 6828.56  , 6828.126 ,
+       6827.6914], shape=(3063,), dtype='>f4'), array([14348.555, 14611.315, 14555.187, ..., 30098.879, 30004.225,
+       30361.55 ], shape=(3063,), dtype='>f4'), array([ 8927.4  ,  9561.259, 11380.946, ..., 31561.998, 31462.37 ,
+       31836.143], shape=(3063,), dtype='>f4'), array([17.61994 , 22.05214 , 17.444782, ..., 41.04639 , 32.1058  ,
+       48.541668], shape=(3063,), dtype='>f4'), array([ 66.98205,  67.5425 ,  70.87472, ..., 117.17877, 116.97457,
+       117.69337], shape=(3063,), dtype='>f4'))
+
+
+
+================================================================================
+INSPECCIONANDO: ./data/BINTABLE/100446.fits
+================================================================================
+
+Total de HDUs (extensiones): 6
+
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 0: PRIMARY
+────────────────────────────────────────────────────────────────────────────────
+Tipo: PrimaryHDU
+
+HEADERS (11 campos):
+────────────────────────────────────────────────────────────────────────────────
+COMMENT              =   FITS (Flexible Image Transport System) format defined in Astronomy and / 
+COMMENT              =   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365. / 
+COMMENT              =   Contact the NASA Science Office of Standards and Technology for the / 
+COMMENT              =   FITS Definition document #100 and other FITS information. / 
+
+TODOS LOS HEADERS:
+SIMPLE               = True                                               / file does conform to FITS standard
+BITPIX               = 16                                                 / number of bits per data pixel
+NAXIS                = 0                                                  / number of data axes
+EXTEND               = True                                               / There may be standard extensions
+COMMENT              =   FITS (Flexible Image Transport System) format defined in Astronomy and / 
+COMMENT              =   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365. / 
+COMMENT              =   Contact the NASA Science Office of Standards and Technology for the / 
+COMMENT              =   FITS Definition document #100 and other FITS information. / 
+ORIGIN               = STScI-STSDAS/TABLES                                / Tables version 2002-02-22
+FILENAME             = 100446.fits                                        / name of file
+NEXTEND              = 5                                                  / number of extensions in file
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 1: merged
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (42 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = F8                                                 / 
+TEFF                 = 5967                                               / 2000A&AS..141..491C (Chen)
+LOGG                 = 4.29                                               / 2000A&AS..141..491C (Chen)
+FEH                  = -0.48                                              / 2000A&AS..141..491C (Chen)
+OBJECT               = 100446                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (15011,)), ('spectrum', '>f4', (15011,))])
+
+  Columnas:
+    - wavelength: 15011E
+    - spectrum: 15011E
+
+  Primeras filas:
+    Row 0: (array([3465.    , 3465.4001, 3465.8   , ..., 9468.2   , 9468.601 ,
+       9469.    ], shape=(15011,), dtype='>f4'), array([6.0362440e-01, 5.5161065e-01, 5.1790786e-01, ..., 9.9999997e-05,
+       9.9999997e-05, 9.9999997e-05], shape=(15011,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 2: c0005280002
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (48 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = F8                                                 / 
+TEFF                 = 5967                                               / 2000A&AS..141..491C (Chen)
+LOGG                 = 4.29                                               / 2000A&AS..141..491C (Chen)
+FEH                  = -0.48                                              / 2000A&AS..141..491C (Chen)
+OBJECT               = 100446                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3061,)), ('spectrum', '>f4', (3061,)), ('raw', '>f4', (3061,)), ('background', '>f4', (3061,)), ('sigma', '>f4', (3061,))])
+
+  Columnas:
+    - wavelength: 3061E
+    - spectrum: 3061E
+    - raw: 3061E
+    - background: 3061E
+    - sigma: 3061E
+
+  Primeras filas:
+    Row 0: (array([4771.9185, 4771.485 , 4771.0513, ..., 3447.1301, 3446.6975,
+       3446.2651], shape=(3061,), dtype='>f4'), array([1.084098 , 1.0941553, 1.1175547, ..., 0.577942 , 0.5517776,
+       0.5293101], shape=(3061,), dtype='>f4'), array([1.0850233 , 1.104246  , 1.1175638 , ..., 0.5779498 , 0.55175036,
+       0.5293755 ], shape=(3061,), dtype='>f4'), array([0.00677177, 0.00566711, 0.00678493, ..., 0.00391731, 0.003514  ,
+       0.00438781], shape=(3061,), dtype='>f4'), array([0.00429612, 0.00469238, 0.00433155, ..., 0.00450997, 0.00441302,
+       0.00433332], shape=(3061,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 3: c0005300002
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (48 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = F8                                                 / 
+TEFF                 = 5967                                               / 2000A&AS..141..491C (Chen)
+LOGG                 = 4.29                                               / 2000A&AS..141..491C (Chen)
+FEH                  = -0.48                                              / 2000A&AS..141..491C (Chen)
+OBJECT               = 100446                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3061,)), ('spectrum', '>f4', (3061,)), ('raw', '>f4', (3061,)), ('background', '>f4', (3061,)), ('sigma', '>f4', (3061,))])
+
+  Columnas:
+    - wavelength: 3061E
+    - spectrum: 3061E
+    - raw: 3061E
+    - background: 3061E
+    - sigma: 3061E
+
+  Primeras filas:
+    Row 0: (array([5414.914 , 5414.4805, 5414.047 , ..., 4089.656 , 4089.2236,
+       4088.791 ], shape=(3061,), dtype='>f4'), array([0.98745644, 1.0020933 , 1.0162094 , ..., 1.1018366 , 1.1153601 ,
+       1.1134138 ], shape=(3061,), dtype='>f4'), array([0.9832305 , 0.99775064, 1.0107255 , ..., 1.1018944 , 1.115361  ,
+       1.113449  ], shape=(3061,), dtype='>f4'), array([0.00143779, 0.00153746, 0.00126014, ..., 0.00217386, 0.00259449,
+       0.00169612], shape=(3061,), dtype='>f4'), array([0.00432426, 0.00435621, 0.00443145, ..., 0.00497684, 0.00500784,
+       0.00500147], shape=(3061,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 4: a0005280002
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (48 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = F8                                                 / 
+TEFF                 = 5967                                               / 2000A&AS..141..491C (Chen)
+LOGG                 = 4.29                                               / 2000A&AS..141..491C (Chen)
+FEH                  = -0.48                                              / 2000A&AS..141..491C (Chen)
+OBJECT               = 100446                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3061,)), ('spectrum', '>f4', (3061,)), ('raw', '>f4', (3061,)), ('background', '>f4', (3061,)), ('sigma', '>f4', (3061,))])
+
+  Columnas:
+    - wavelength: 3061E
+    - spectrum: 3061E
+    - raw: 3061E
+    - background: 3061E
+    - sigma: 3061E
+
+  Primeras filas:
+    Row 0: (array([4771.9185, 4771.485 , 4771.0513, ..., 3447.1301, 3446.6975,
+       3446.2651], shape=(3061,), dtype='>f4'), array([28323.215 , 28591.352 , 29208.21  , ...,  7380.248 ,  7036.2495,
+        6740.1396], shape=(3061,), dtype='>f4'), array([28347.389 , 28855.031 , 29208.451 , ...,  7380.3477,  7035.9023,
+        6740.972 ], shape=(3061,), dtype='>f4'), array([176.91975 , 148.0871  , 177.32985 , ...,  50.023544,  44.810455,
+        55.873573], shape=(3061,), dtype='>f4'), array([112.24065 , 122.61647 , 113.208664, ...,  57.591774,  56.274628,
+        55.179726], shape=(3061,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 5: a0005300002
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (48 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = F8                                                 / 
+TEFF                 = 5967                                               / 2000A&AS..141..491C (Chen)
+LOGG                 = 4.29                                               / 2000A&AS..141..491C (Chen)
+FEH                  = -0.48                                              / 2000A&AS..141..491C (Chen)
+OBJECT               = 100446                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3061,)), ('spectrum', '>f4', (3061,)), ('raw', '>f4', (3061,)), ('background', '>f4', (3061,)), ('sigma', '>f4', (3061,))])
+
+  Columnas:
+    - wavelength: 3061E
+    - spectrum: 3061E
+    - raw: 3061E
+    - background: 3061E
+    - sigma: 3061E
+
+  Primeras filas:
+    Row 0: (array([5414.914 , 5414.4805, 5414.047 , ..., 4089.656 , 4089.2236,
+       4088.791 ], shape=(3061,), dtype='>f4'), array([23542.402, 23888.953, 24223.047, ..., 21483.73 , 21747.932,
+       21710.51 ], shape=(3061,), dtype='>f4'), array([23441.648, 23785.428, 24092.33 , ..., 21484.86 , 21747.947,
+       21711.195], shape=(3061,), dtype='>f4'), array([34.278927, 36.651592, 30.037521, ..., 42.386204, 50.588856,
+       33.072674], shape=(3061,), dtype='>f4'), array([103.09674, 103.84802, 105.63104, ...,  97.03892,  97.64578,
+        97.52388], shape=(3061,), dtype='>f4'))
+
+
+
+================================================================================
+INSPECCIONANDO: ./data/BINTABLE/100470.fits
+================================================================================
+
+Total de HDUs (extensiones): 12
+
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 0: PRIMARY
+────────────────────────────────────────────────────────────────────────────────
+Tipo: PrimaryHDU
+
+HEADERS (11 campos):
+────────────────────────────────────────────────────────────────────────────────
+COMMENT              =   FITS (Flexible Image Transport System) format defined in Astronomy and / 
+COMMENT              =   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365. / 
+COMMENT              =   Contact the NASA Science Office of Standards and Technology for the / 
+COMMENT              =   FITS Definition document #100 and other FITS information. / 
+
+TODOS LOS HEADERS:
+SIMPLE               = True                                               / file does conform to FITS standard
+BITPIX               = 16                                                 / number of bits per data pixel
+NAXIS                = 0                                                  / number of data axes
+EXTEND               = True                                               / There may be standard extensions
+COMMENT              =   FITS (Flexible Image Transport System) format defined in Astronomy and / 
+COMMENT              =   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365. / 
+COMMENT              =   Contact the NASA Science Office of Standards and Technology for the / 
+COMMENT              =   FITS Definition document #100 and other FITS information. / 
+ORIGIN               = STScI-STSDAS/TABLES                                / Tables version 2002-02-22
+FILENAME             = 100470.fits                                        / name of file
+NEXTEND              = 11                                                 / number of extensions in file
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 1: merged
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (44 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (15011,)), ('spectrum', '>f4', (15011,))])
+
+  Columnas:
+    - wavelength: 15011E
+    - spectrum: 15011E
+
+  Primeras filas:
+    Row 0: (array([3465.    , 3465.4001, 3465.8   , ..., 9468.2   , 9468.601 ,
+       9469.    ], shape=(15011,), dtype='>f4'), array([0.2110803 , 0.17927916, 0.15641409, ..., 0.59914476, 0.6070762 ,
+       0.5911107 ], shape=(15011,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 2: c0002160042
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3066,)), ('spectrum', '>f4', (3066,)), ('raw', '>f4', (3066,)), ('background', '>f4', (3066,)), ('sigma', '>f4', (3066,))])
+
+  Columnas:
+    - wavelength: 3066E
+    - spectrum: 3066E
+    - raw: 3066E
+    - background: 3066E
+    - sigma: 3066E
+
+  Primeras filas:
+    Row 0: (array([6009.848 , 6009.414 , 6008.9795, ..., 4680.5635, 4680.13  ,
+       4679.697 ], shape=(3066,), dtype='>f4'), array([0.93257004, 0.9866073 , 0.97429454, ..., 0.8090969 , 0.8266342 ,
+       0.85633945], shape=(3066,), dtype='>f4'), array([0.9685971 , 0.9883921 , 0.97730845, ..., 0.8091809 , 0.8265831 ,
+       0.86005193], shape=(3066,), dtype='>f4'), array([0.0020643 , 0.00154876, 0.00231368, ..., 0.00191505, 0.00186071,
+       0.0006587 ], shape=(3066,), dtype='>f4'), array([0.00591779, 0.00533172, 0.00533522, ..., 0.0050929 , 0.00514702,
+       0.00533861], shape=(3066,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 3: c0203230037
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3062,)), ('spectrum', '>f4', (3062,)), ('raw', '>f4', (3062,)), ('background', '>f4', (3062,)), ('sigma', '>f4', (3062,))])
+
+  Columnas:
+    - wavelength: 3062E
+    - spectrum: 3062E
+    - raw: 3062E
+    - background: 3062E
+    - sigma: 3062E
+
+  Primeras filas:
+    Row 0: (array([4782.2114, 4781.778 , 4781.344 , ..., 3456.9924, 3456.5598,
+       3456.1272], shape=(3062,), dtype='>f4'), array([0.95041966, 0.9619345 , 0.9752768 , ..., 0.1760514 , 0.1715032 ,
+       0.1866684 ], shape=(3062,), dtype='>f4'), array([0.9504716 , 0.9620303 , 0.97520304, ..., 0.17648494, 0.17195056,
+       0.18570077], shape=(3062,), dtype='>f4'), array([0.00303207, 0.00266491, 0.00298132, ..., 0.00286534, 0.00504448,
+       0.00536028], shape=(3062,), dtype='>f4'), array([0.00448396, 0.0045117 , 0.00454566, ..., 0.00395359, 0.00392572,
+       0.00406704], shape=(3062,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 4: c9512180057
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3060,)), ('spectrum', '>f4', (3060,)), ('raw', '>f4', (3060,)), ('background', '>f4', (3060,)), ('sigma', '>f4', (3060,))])
+
+  Columnas:
+    - wavelength: 3060E
+    - spectrum: 3060E
+    - raw: 3060E
+    - background: 3060E
+    - sigma: 3060E
+
+  Primeras filas:
+    Row 0: (array([6791.8965, 6791.4614, 6791.0264, ..., 5462.3394, 5461.9053,
+       5461.471 ], shape=(3060,), dtype='>f4'), array([0.97176534, 0.9767786 , 0.98013586, ..., 0.9858839 , 1.0137978 ,
+       1.0327429 ], shape=(3060,), dtype='>f4'), array([0.97176224, 0.9767761 , 0.9714121 , ..., 0.9859606 , 1.0136229 ,
+       1.0327606 ], shape=(3060,), dtype='>f4'), array([0.00101156, 0.00075916, 0.00150175, ..., 0.00137615, 0.0016697 ,
+       0.00135549], shape=(3060,), dtype='>f4'), array([0.00391747, 0.00392782, 0.00431726, ..., 0.00544628, 0.00552394,
+       0.00557571], shape=(3060,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 5: c9605070030
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3060,)), ('spectrum', '>f4', (3060,)), ('raw', '>f4', (3060,)), ('background', '>f4', (3060,)), ('sigma', '>f4', (3060,))])
+
+  Columnas:
+    - wavelength: 3060E
+    - spectrum: 3060E
+    - raw: 3060E
+    - background: 3060E
+    - sigma: 3060E
+
+  Primeras filas:
+    Row 0: (array([9469.56  , 9469.124 , 9468.688 , ..., 8137.918 , 8137.4824,
+       8137.0474], shape=(3060,), dtype='>f4'), array([0.5419715 , 0.5805517 , 0.6094211 , ..., 0.7698326 , 0.7524278 ,
+       0.75216657], shape=(3060,), dtype='>f4'), array([0.5373736 , 0.53000945, 0.50820345, ..., 0.8149076 , 0.79960823,
+       0.8054922 ], shape=(3060,), dtype='>f4'), array([0.00269487, 0.00247725, 0.00277713, ..., 0.00272686, 0.00300452,
+       0.00262307], shape=(3060,), dtype='>f4'), array([0.00422781, 0.00420397, 0.00433072, ..., 0.00357023, 0.00353741,
+       0.0035493 ], shape=(3060,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 6: c9905300007
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3063,)), ('spectrum', '>f4', (3063,)), ('raw', '>f4', (3063,)), ('background', '>f4', (3063,)), ('sigma', '>f4', (3063,))])
+
+  Columnas:
+    - wavelength: 3063E
+    - spectrum: 3063E
+    - raw: 3063E
+    - background: 3063E
+    - sigma: 3063E
+
+  Primeras filas:
+    Row 0: (array([8160.8574, 8160.422 , 8159.9863, ..., 6828.841 , 6828.406 ,
+       6827.971 ], shape=(3063,), dtype='>f4'), array([0.77156067, 0.80088043, 0.7998205 , ..., 0.9659941 , 0.9354536 ,
+       0.95895445], shape=(3063,), dtype='>f4'), array([0.52464175, 0.5076761 , 0.62147325, ..., 1.011676  , 0.97990227,
+       1.0044091 ], shape=(3063,), dtype='>f4'), array([0.00531874, 0.004274  , 0.00456967, ..., 0.00847088, 0.00820309,
+       0.00926265], shape=(3063,), dtype='>f4'), array([0.00475691, 0.00463272, 0.00510113, ..., 0.00529502, 0.00521975,
+       0.00528133], shape=(3063,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 7: a0002160042
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3066,)), ('spectrum', '>f4', (3066,)), ('raw', '>f4', (3066,)), ('background', '>f4', (3066,)), ('sigma', '>f4', (3066,))])
+
+  Columnas:
+    - wavelength: 3066E
+    - spectrum: 3066E
+    - raw: 3066E
+    - background: 3066E
+    - sigma: 3066E
+
+  Primeras filas:
+    Row 0: (array([6009.848 , 6009.414 , 6008.9795, ..., 4680.5635, 4680.13  ,
+       4679.697 ], shape=(3066,), dtype='>f4'), array([14455.011 , 15293.718 , 15103.913 , ..., 11180.806 , 11423.39  ,
+       11834.1455], shape=(3066,), dtype='>f4'), array([15013.437, 15321.385, 15150.636, ..., 11181.967, 11422.683,
+       11885.45 ], shape=(3066,), dtype='>f4'), array([31.996988, 24.007826, 35.867626, ..., 26.463806, 25.7135  ,
+        9.102829], shape=(3066,), dtype='>f4'), array([91.72691 , 82.64872 , 82.708694, ..., 70.378105, 71.12746 ,
+       73.77665 ], shape=(3066,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 8: a0203230037
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3062,)), ('spectrum', '>f4', (3062,)), ('raw', '>f4', (3062,)), ('background', '>f4', (3062,)), ('sigma', '>f4', (3062,))])
+
+  Columnas:
+    - wavelength: 3062E
+    - spectrum: 3062E
+    - raw: 3062E
+    - background: 3062E
+    - sigma: 3062E
+
+  Primeras filas:
+    Row 0: (array([4782.2114, 4781.778 , 4781.344 , ..., 3456.9924, 3456.5598,
+       3456.1272], shape=(3062,), dtype='>f4'), array([19863.494 , 20084.775 , 20343.855 , ...,  1103.0148,  1074.3379,
+        1169.1339], shape=(3062,), dtype='>f4'), array([19864.58  , 20086.775 , 20342.316 , ...,  1105.7311,  1077.1403,
+        1163.0735], shape=(3062,), dtype='>f4'), array([63.36942 , 55.642086, 62.189   , ..., 17.952204, 31.599833,
+       33.57229 ], shape=(3062,), dtype='>f4'), array([93.71342 , 94.20236 , 94.82046 , ..., 24.770407, 24.591686,
+       25.472498], shape=(3062,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 9: a9512180057
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3060,)), ('spectrum', '>f4', (3060,)), ('raw', '>f4', (3060,)), ('background', '>f4', (3060,)), ('sigma', '>f4', (3060,))])
+
+  Columnas:
+    - wavelength: 3060E
+    - spectrum: 3060E
+    - raw: 3060E
+    - background: 3060E
+    - sigma: 3060E
+
+  Primeras filas:
+    Row 0: (array([6791.8965, 6791.4614, 6791.0264, ..., 5462.3394, 5461.9053,
+       5461.471 ], shape=(3060,), dtype='>f4'), array([20557.947, 20655.314, 20717.67 , ..., 11051.434, 11356.219,
+       11560.109], shape=(3060,), dtype='>f4'), array([20557.88 , 20655.262, 20533.271, ..., 11052.293, 11354.259,
+       11560.308], shape=(3060,), dtype='>f4'), array([21.399885, 16.053532, 31.743319, ..., 15.426206, 18.703445,
+       15.172847], shape=(3060,), dtype='>f4'), array([82.875175, 83.05918 , 91.25634 , ..., 61.051037, 61.877323,
+       62.412266], shape=(3060,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 10: a9605070030
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3060,)), ('spectrum', '>f4', (3060,)), ('raw', '>f4', (3060,)), ('background', '>f4', (3060,)), ('sigma', '>f4', (3060,))])
+
+  Columnas:
+    - wavelength: 3060E
+    - spectrum: 3060E
+    - raw: 3060E
+    - background: 3060E
+    - sigma: 3060E
+
+  Primeras filas:
+    Row 0: (array([9469.56  , 9469.124 , 9468.688 , ..., 8137.918 , 8137.4824,
+       8137.0474], shape=(3060,), dtype='>f4'), array([ 5691.1846,  6091.025 ,  6388.4346, ..., 16668.588 , 16292.723 ,
+       16288.016 ], shape=(3060,), dtype='>f4'), array([ 5642.903 ,  5560.7466,  5327.3916, ..., 17644.562 , 17314.346 ,
+       17442.771 ], shape=(3060,), dtype='>f4'), array([28.298532, 25.990778, 29.112051, ..., 59.04248 , 65.05845 ,
+       56.802036], shape=(3060,), dtype='>f4'), array([44.39583 , 44.107132, 45.398014, ..., 77.30348 , 76.59745 ,
+       76.85942 ], shape=(3060,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 11: a9905300007
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = K0III                                              / 
+TEFF                 = 4667                                               / 1986A&A...161..314C (Cottrell)
+LOGG                 = 2.5                                                / 1986A&A...161..314C (Cottrell)
+FEH                  = -0.4                                               / 1986A&A...161..314C (Cottrell)
+OBJECT               = 100470                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3063,)), ('spectrum', '>f4', (3063,)), ('raw', '>f4', (3063,)), ('background', '>f4', (3063,)), ('sigma', '>f4', (3063,))])
+
+  Columnas:
+    - wavelength: 3063E
+    - spectrum: 3063E
+    - raw: 3063E
+    - background: 3063E
+    - sigma: 3063E
+
+  Primeras filas:
+    Row 0: (array([8160.8574, 8160.422 , 8159.9863, ..., 6828.841 , 6828.406 ,
+       6827.971 ], shape=(3063,), dtype='>f4'), array([ 8505.901,  8825.446,  8810.092, ..., 15606.136, 15103.037,
+       15472.413], shape=(3063,), dtype='>f4'), array([ 5783.798 ,  5594.4287,  6845.5815, ..., 16344.149 , 15820.668 ,
+       16205.809 ], shape=(3063,), dtype='>f4'), array([ 58.63529 ,  47.098125,  50.33536 , ..., 136.85138 , 132.44011 ,
+       149.44977 ], shape=(3063,), dtype='>f4'), array([52.441525, 51.051105, 56.18937 , ..., 85.543816, 84.27369 ,
+       85.21246 ], shape=(3063,), dtype='>f4'))
+
+
+
+================================================================================
+INSPECCIONANDO: ./data/BINTABLE/100563.fits
+================================================================================
+
+Total de HDUs (extensiones): 6
+
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 0: PRIMARY
+────────────────────────────────────────────────────────────────────────────────
+Tipo: PrimaryHDU
+
+HEADERS (11 campos):
+────────────────────────────────────────────────────────────────────────────────
+COMMENT              =   FITS (Flexible Image Transport System) format defined in Astronomy and / 
+COMMENT              =   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365. / 
+COMMENT              =   Contact the NASA Science Office of Standards and Technology for the / 
+COMMENT              =   FITS Definition document #100 and other FITS information. / 
+
+TODOS LOS HEADERS:
+SIMPLE               = True                                               / file does conform to FITS standard
+BITPIX               = 16                                                 / number of bits per data pixel
+NAXIS                = 0                                                  / number of data axes
+EXTEND               = True                                               / There may be standard extensions
+COMMENT              =   FITS (Flexible Image Transport System) format defined in Astronomy and / 
+COMMENT              =   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365. / 
+COMMENT              =   Contact the NASA Science Office of Standards and Technology for the / 
+COMMENT              =   FITS Definition document #100 and other FITS information. / 
+ORIGIN               = STScI-STSDAS/TABLES                                / Tables version 2002-02-22
+FILENAME             = 100563.fits                                        / name of file
+NEXTEND              = 5                                                  / number of extensions in file
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 1: merged
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (43 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = F5V                                                / 
+TEFF                 = 6423                                               / 2000A&AS..141..491C (Chen)
+LOGG                 = 4.31                                               / 2000A&AS..141..491C (Chen)
+FEH                  = -0.02                                              / 2000A&AS..141..491C (Chen)
+OBJECT               = 100563                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (15011,)), ('spectrum', '>f4', (15011,))])
+
+  Columnas:
+    - wavelength: 15011E
+    - spectrum: 15011E
+
+  Primeras filas:
+    Row 0: (array([3465.    , 3465.4001, 3465.8   , ..., 9468.2   , 9468.601 ,
+       9469.    ], shape=(15011,), dtype='>f4'), array([7.6187521e-01, 7.2859097e-01, 6.7840803e-01, ..., 9.9999997e-05,
+       9.9999997e-05, 9.9999997e-05], shape=(15011,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 2: c0101150092
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = F5V                                                / 
+TEFF                 = 6423                                               / 2000A&AS..141..491C (Chen)
+LOGG                 = 4.31                                               / 2000A&AS..141..491C (Chen)
+FEH                  = -0.02                                              / 2000A&AS..141..491C (Chen)
+OBJECT               = 100563                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3062,)), ('spectrum', '>f4', (3062,)), ('raw', '>f4', (3062,)), ('background', '>f4', (3062,)), ('sigma', '>f4', (3062,))])
+
+  Columnas:
+    - wavelength: 3062E
+    - spectrum: 3062E
+    - raw: 3062E
+    - background: 3062E
+    - sigma: 3062E
+
+  Primeras filas:
+    Row 0: (array([6005.6646, 6005.231 , 6004.797 , ..., 4679.6533, 4679.2207,
+       4678.788 ], shape=(3062,), dtype='>f4'), array([0.9104848 , 0.9229918 , 0.91007257, ..., 1.2042005 , 1.203334  ,
+       1.1988248 ], shape=(3062,), dtype='>f4'), array([0.91117424, 0.92383116, 0.9096472 , ..., 1.2042952 , 1.2030275 ,
+       1.1994905 ], shape=(3062,), dtype='>f4'), array([0.00617531, 0.00158064, 0.00267639, ..., 0.00312067, 0.00358848,
+       0.00409127], shape=(3062,), dtype='>f4'), array([0.01090517, 0.01095609, 0.01088991, ..., 0.01230537, 0.01230743,
+       0.01229073], shape=(3062,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 3: c0203230038
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = F5V                                                / 
+TEFF                 = 6423                                               / 2000A&AS..141..491C (Chen)
+LOGG                 = 4.31                                               / 2000A&AS..141..491C (Chen)
+FEH                  = -0.02                                              / 2000A&AS..141..491C (Chen)
+OBJECT               = 100563                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3062,)), ('spectrum', '>f4', (3062,)), ('raw', '>f4', (3062,)), ('background', '>f4', (3062,)), ('sigma', '>f4', (3062,))])
+
+  Columnas:
+    - wavelength: 3062E
+    - spectrum: 3062E
+    - raw: 3062E
+    - background: 3062E
+    - sigma: 3062E
+
+  Primeras filas:
+    Row 0: (array([4782.603 , 4782.1694, 4781.736 , ..., 3457.2925, 3456.8599,
+       3456.4272], shape=(3062,), dtype='>f4'), array([1.2211046 , 1.2381392 , 1.2639346 , ..., 0.71780854, 0.7169233 ,
+       0.72025543], shape=(3062,), dtype='>f4'), array([1.2211183 , 1.2380431 , 1.2638406 , ..., 0.71784705, 0.71718824,
+       0.7204595 ], shape=(3062,), dtype='>f4'), array([0.00301243, 0.00280006, 0.00332873, ..., 0.00335022, 0.0019653 ,
+       0.0029238 ], shape=(3062,), dtype='>f4'), array([0.00458426, 0.00461541, 0.00466335, ..., 0.00652005, 0.00651065,
+       0.00652794], shape=(3062,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 4: a0101150092
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = F5V                                                / 
+TEFF                 = 6423                                               / 2000A&AS..141..491C (Chen)
+LOGG                 = 4.31                                               / 2000A&AS..141..491C (Chen)
+FEH                  = -0.02                                              / 2000A&AS..141..491C (Chen)
+OBJECT               = 100563                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3062,)), ('spectrum', '>f4', (3062,)), ('raw', '>f4', (3062,)), ('background', '>f4', (3062,)), ('sigma', '>f4', (3062,))])
+
+  Columnas:
+    - wavelength: 3062E
+    - spectrum: 3062E
+    - raw: 3062E
+    - background: 3062E
+    - sigma: 3062E
+
+  Primeras filas:
+    Row 0: (array([6005.6646, 6005.231 , 6004.797 , ..., 4679.6533, 4679.2207,
+       4678.788 ], shape=(3062,), dtype='>f4'), array([3266.5996, 3312.2808, 3266.7058, ..., 4388.4185, 4382.1387,
+       4362.5747], shape=(3062,), dtype='>f4'), array([3269.0732, 3315.293 , 3265.179 , ..., 4388.763 , 4381.0225,
+       4364.9976], shape=(3062,), dtype='>f4'), array([22.155516 ,  5.672343 ,  9.606919 , ..., 11.3725195, 13.068053 ,
+       14.888291 ], shape=(3062,), dtype='>f4'), array([39.12513 , 39.317417, 39.08935 , ..., 44.843967, 44.81952 ,
+       44.72648 ], shape=(3062,), dtype='>f4'))
+
+────────────────────────────────────────────────────────────────────────────────
+EXTENSIÓN 5: a0203230038
+────────────────────────────────────────────────────────────────────────────────
+Tipo: BinTableHDU
+
+HEADERS (49 campos):
+────────────────────────────────────────────────────────────────────────────────
+SPTYPE               = F5V                                                / 
+TEFF                 = 6423                                               / 2000A&AS..141..491C (Chen)
+LOGG                 = 4.31                                               / 2000A&AS..141..491C (Chen)
+FEH                  = -0.02                                              / 2000A&AS..141..491C (Chen)
+OBJECT               = 100563                                             / Name of the object observed
+
+DATA:
+  Shape: (1,)
+  Dtype: (numpy.record, [('wavelength', '>f4', (3062,)), ('spectrum', '>f4', (3062,)), ('raw', '>f4', (3062,)), ('background', '>f4', (3062,)), ('sigma', '>f4', (3062,))])
+
+  Columnas:
+    - wavelength: 3062E
+    - spectrum: 3062E
+    - raw: 3062E
+    - background: 3062E
+    - sigma: 3062E
+
+  Primeras filas:
+    Row 0: (array([4782.603 , 4782.1694, 4781.736 , ..., 3457.2925, 3456.8599,
+       3456.4272], shape=(3062,), dtype='>f4'), array([31145.52  , 31582.195 , 32242.252 , ...,  5601.3623,  5593.6055,
+        5618.7734], shape=(3062,), dtype='>f4'), array([31145.871 , 31579.746 , 32239.852 , ...,  5601.6626,  5595.673 ,
+        5620.365 ], shape=(3062,), dtype='>f4'), array([76.83523 , 71.42328 , 84.91409 , ..., 26.143175, 15.33376 ,
+       22.808813], shape=(3062,), dtype='>f4'), array([116.926216, 117.72904 , 118.95929 , ...,  50.878693,  50.797623,
+        50.92502 ], shape=(3062,), dtype='>f4'))
+
+
