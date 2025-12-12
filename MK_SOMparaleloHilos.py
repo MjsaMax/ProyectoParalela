@@ -2,17 +2,17 @@ import numpy as np
 from pathlib import Path
 from astropy.io import fits
 import time
-from multiprocessing import Pool, cpu_count
-import functools
+import threading
+import os
+from queue import Queue
 
 
 def extract_features(wav, flux):
-    """Extrae 10 características espectrales robustas"""
+    # ... existing code ...
     flux_norm = flux / np.max(flux)
     
     features = {}
     
-    # 1. Índices de color
     idx_4200 = np.argmin(np.abs(wav - 4200))
     idx_5500 = np.argmin(np.abs(wav - 5500))
     idx_7000 = np.argmin(np.abs(wav - 7000))
@@ -21,7 +21,6 @@ def extract_features(wav, flux):
     features['ci_4200_7000'] = flux_norm[idx_4200] / flux_norm[idx_7000]
     features['ci_5500_8500'] = flux_norm[idx_5500] / flux_norm[idx_8500]
     
-    # 2. Profundidad de líneas
     def line_depth(wav_center, width=50):
         idx = np.argmin(np.abs(wav - wav_center))
         linea = flux_norm[idx]
@@ -33,18 +32,15 @@ def extract_features(wav, flux):
     features['Hbeta'] = line_depth(4861, width=50)
     features['Halpha'] = line_depth(6563, width=50)
     
-    # 3. Pendiente espectral (Balmer jump)
     balmer_region = flux_norm[(wav > 3600) & (wav < 4200)]
     if len(balmer_region) > 0:
         features['balmer_jump'] = np.mean(balmer_region)
     else:
         features['balmer_jump'] = 0
     
-    # 4. Continuidad infrarroja
     ir_region = flux_norm[(wav > 7000) & (wav < 8500)]
     features['ir_strength'] = np.mean(ir_region) if len(ir_region) > 0 else 0
     
-    # 5. Gradiente UV-óptico
     uv_region = flux_norm[(wav > 3800) & (wav < 4500)]
     opt_region = flux_norm[(wav > 5500) & (wav < 6500)]
     features['uv_opt_ratio'] = np.mean(uv_region) / np.mean(opt_region) if np.mean(opt_region) > 0 else 0
@@ -52,8 +48,8 @@ def extract_features(wav, flux):
     return np.array([features[k] for k in sorted(features.keys())])
 
 
-def _load_fits_file(ruta):
-    """Carga y procesa un archivo FITS en paralelo"""
+def _load_fits_file(ruta, output_queue):
+    """Carga archivo FITS en hilo"""
     try:
         with fits.open(ruta) as hdul:
             hdr = hdul[1].header
@@ -66,22 +62,19 @@ def _load_fits_file(ruta):
             flux = flux / np.max(flux)
             
             features = extract_features(wav, flux)
-            return ruta, features, real_type
+            output_queue.put((ruta, features, real_type))
     except Exception as e:
         print(f"Error loading {ruta}: {e}")
-        return None
 
 
-def _compute_distances_row(args):
-    """Calcula distancias de una fila del mapa en paralelo"""
-    row_idx, x, weights_row = args
+def _compute_distances_row(row_idx, x, weights_row, output_queue):
+    """Calcula distancias en hilo"""
     distances = np.array([np.sqrt(np.sum((x - w) ** 2)) for w in weights_row])
-    return row_idx, distances
+    output_queue.put((row_idx, distances))
 
 
-def _compute_bmu_batch(args):
-    """Encuentra BMU para un lote de muestras"""
-    x, weights, map_height, map_width = args
+def _compute_bmu_batch(x, weights, map_height, map_width, output_queue, idx):
+    """Encuentra BMU en hilo"""
     distances = np.zeros((map_height, map_width))
     
     for i in range(map_height):
@@ -89,7 +82,7 @@ def _compute_bmu_batch(args):
             distances[i, j] = np.sqrt(np.sum((x - weights[i, j]) ** 2))
     
     bmu_idx = np.unravel_index(np.argmin(distances), distances.shape)
-    return bmu_idx, np.min(distances)
+    output_queue.put((idx, bmu_idx, np.min(distances)))
 
 
 class SimpleSOM:
@@ -104,18 +97,31 @@ class SimpleSOM:
         
         self.type_map = np.full((map_height, map_width), "?", dtype=object)
         self.count_map = np.zeros((map_height, map_width), dtype=int)
+        self.lock = threading.Lock()
     
     def find_bmu(self, x):
-        """Encuentra BMU - versión paralelizada por filas"""
-        num_cores = cpu_count()
+        """Encuentra BMU - versión con threading por filas"""
+        num_threads = os.cpu_count()
+        output_queue = Queue()
+        threads = []
         
-        args_list = [(i, x, self.weights[i]) for i in range(self.map_height)]
+        # <CHANGE> Crear hilos para cada fila en lugar de Pool
+        for i in range(self.map_height):
+            thread = threading.Thread(
+                target=_compute_distances_row,
+                args=(i, x, self.weights[i], output_queue)
+            )
+            threads.append(thread)
+            thread.start()
         
-        with Pool(num_cores) as pool:
-            results = pool.map(_compute_distances_row, args_list)
+        # Esperar a que terminen todos los hilos
+        for thread in threads:
+            thread.join()
         
+        # Recopilar resultados
         distances = np.zeros((self.map_height, self.map_width))
-        for row_idx, row_distances in results:
+        while not output_queue.empty():
+            row_idx, row_distances = output_queue.get()
             distances[row_idx] = row_distances
         
         bmu_idx = np.unravel_index(np.argmin(distances), distances.shape)
@@ -129,35 +135,53 @@ class SimpleSOM:
         return np.exp(-(distance ** 2) / (2 * (sigma ** 2)))
     
     def train(self, data, epochs=100):
-        """Entrena SOM con actualización paralelizada"""
+        """Entrena SOM con actualización en threading"""
         n_samples = data.shape[0]
-        num_cores = cpu_count()
+        num_threads = os.cpu_count()
         
         for epoch in range(epochs):
             sigma = 1.0 * np.exp(-epoch / (epochs / 3))
             learning_rate = self.learning_rate * np.exp(-epoch / epochs)
             
-            # Procesar muestras en lotes con BMU paralelizado
-            lote_size = max(1, n_samples // (num_cores * 2))
+            # Procesar muestras en lotes con BMU en threading
+            lote_size = max(1, n_samples // (num_threads * 2))
             sample_indices = np.random.permutation(n_samples)
             
             for batch_start in range(0, n_samples, lote_size):
                 batch_end = min(batch_start + lote_size, n_samples)
                 batch_indices = sample_indices[batch_start:batch_end]
                 
-                args_list = [(data[i], self.weights, self.map_height, self.map_width) 
-                            for i in batch_indices]
+                output_queue = Queue()
+                threads = []
                 
-                with Pool(num_cores) as pool:
-                    bmu_results = pool.map(_compute_bmu_batch, args_list)
+                # <CHANGE> Crear hilos para cada muestra en lugar de Pool
+                for idx, sample_idx in enumerate(batch_indices):
+                    thread = threading.Thread(
+                        target=_compute_bmu_batch,
+                        args=(data[sample_idx], self.weights, self.map_height, 
+                              self.map_width, output_queue, idx)
+                    )
+                    threads.append(thread)
+                    thread.start()
                 
-                # Actualizar pesos secuencialmente (evita race conditions)
-                for sample_idx, (bmu_idx, _) in zip(batch_indices, bmu_results):
-                    x = data[sample_idx]
-                    for i in range(self.map_height):
-                        for j in range(self.map_width):
-                            influence = self.gaussian_kernel(bmu_idx, (i, j), sigma)
-                            self.weights[i, j] += learning_rate * influence * (x - self.weights[i, j])
+                # Esperar a que terminen
+                for thread in threads:
+                    thread.join()
+                
+                # Recopilar y aplicar actualizaciones
+                bmu_results = {}
+                while not output_queue.empty():
+                    idx, bmu_idx, _ = output_queue.get()
+                    bmu_results[idx] = bmu_idx
+                
+                for idx, sample_idx in enumerate(batch_indices):
+                    if idx in bmu_results:
+                        bmu_idx = bmu_results[idx]
+                        x = data[sample_idx]
+                        for i in range(self.map_height):
+                            for j in range(self.map_width):
+                                influence = self.gaussian_kernel(bmu_idx, (i, j), sigma)
+                                self.weights[i, j] += learning_rate * influence * (x - self.weights[i, j])
     
     def predict(self, x):
         """Predice el tipo basándose en la BMU"""
@@ -185,14 +209,31 @@ class SimpleSOM:
 
 
 def cargar_datos_paralelo(rutas):
-    """Carga todos los archivos FITS en paralelo"""
-    num_cores = cpu_count()
+    """Carga todos los archivos FITS con threading"""
+    num_threads = os.cpu_count()
+    output_queue = Queue()
+    threads = []
     
-    with Pool(num_cores) as pool:
-        results = pool.map(_load_fits_file, rutas)
+    # <CHANGE> Crear hilos para cargar archivos en lugar de Pool
+    for ruta in rutas:
+        thread = threading.Thread(target=_load_fits_file, args=(ruta, output_queue))
+        threads.append(thread)
+        thread.start()
+        
+        # Limitar número de hilos activos simultáneamente
+        if len(threads) >= num_threads:
+            for t in threads:
+                t.join()
+            threads = []
     
-    # Filtrar resultados None (errores)
-    results = [r for r in results if r is not None]
+    # Esperar a los hilos restantes
+    for thread in threads:
+        thread.join()
+    
+    # Recopilar resultados
+    results = []
+    while not output_queue.empty():
+        results.append(output_queue.get())
     
     if not results:
         return None, None, None
@@ -202,16 +243,16 @@ def cargar_datos_paralelo(rutas):
 
 
 def procesar_carpeta(carpeta, train_epochs=200):
-    """Procesa FITS y entrena SOM con multiprocessing"""
+    """Procesa FITS y entrena SOM con threading puro"""
     rutas = sorted(Path(carpeta).glob("*.fits"))
     
     if len(rutas) == 0:
         print(f"No FITS files found in {carpeta}")
         return
     
-    # Fase 1: Cargar datos en paralelo
+    # Fase 1: Cargar datos con threading
     print("=" * 80)
-    print("FASE 1: Extrayendo características espectrales (paralelizado)...")
+    print("FASE 1: Extrayendo características espectrales (threading puro)...")
     print("=" * 80)
     
     rutas_validas, training_data, training_labels = cargar_datos_paralelo(rutas)
@@ -231,7 +272,7 @@ def procesar_carpeta(carpeta, train_epochs=200):
     
     # Fase 2: Entrenar SOM
     print("\n" + "=" * 80)
-    print("FASE 2: Entrenando SOM (paralelizado)...")
+    print("FASE 2: Entrenando SOM (threading puro)...")
     print("=" * 80)
     
     som = SimpleSOM(map_width=13, map_height=13, feature_dim=training_data.shape[1], learning_rate=0.5)

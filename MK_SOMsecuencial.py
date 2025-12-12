@@ -202,9 +202,9 @@ def procesar_carpeta(carpeta, train_epochs=200): #200 iteraciones predeterminado
         
         if correcto:
             aciertos += 1
-            flag = "✓"
+            flag = "V"
         else:
-            flag = "✗"
+            flag = "X"
         
         total += 1
         print(f"{ruta.name.ljust(25)} | {real.ljust(10)} | {pred.ljust(10)} | {flag}")
@@ -221,7 +221,28 @@ def procesar_carpeta(carpeta, train_epochs=200): #200 iteraciones predeterminado
 
 if __name__ == "__main__":
     inicio=time.time()
-    procesar_carpeta("data/BINTABLE", train_epochs=100)
+    procesar_carpeta("data/BINTABLE", train_epochs=20)
     final=time.time()
     tiempo_total=final-inicio
     print(f"El entrenamiento tardó: {tiempo_total:.4f} s")
+    inicio=time.time()
+    procesar_carpeta("data/BINTABLE", train_epochs=30)
+    final=time.time()
+    tiempo_total=final-inicio
+    print(f"El entrenamiento tardó: {tiempo_total:.4f} s")
+    inicio=time.time()
+    procesar_carpeta("data/BINTABLE", train_epochs=50)
+    final=time.time()
+    tiempo_total=final-inicio
+    print(f"El entrenamiento tardó: {tiempo_total:.4f} s")
+    inicio=time.time()
+    procesar_carpeta("data/BINTABLE", train_epochs=80)
+    final=time.time()
+    tiempo_total=final-inicio
+    print(f"El entrenamiento tardó: {tiempo_total:.4f} s")
+
+
+
+
+
+  
